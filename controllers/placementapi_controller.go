@@ -47,9 +47,8 @@ type PlacementApiReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.11.0/pkg/reconcile
 func (r *PlacementApiReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = log.FromContext(ctx)
-
-	// TODO(user): your logic here
+	l := log.FromContext(ctx)
+	l.Info("PlacementApiReconciler loop starting")
 
 	return ctrl.Result{}, nil
 }
