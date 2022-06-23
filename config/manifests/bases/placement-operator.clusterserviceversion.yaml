@@ -1,0 +1,47 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: placement-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: PlacementApi is the Schema for the placementapis API
+      displayName: Placement Api
+      kind: PlacementApi
+      name: placementapis.placement.openstack.org
+      version: v1beta1
+  description: Placement Operator
+  displayName: Placement Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - OpenStack
+  - Placement
+  - Compute
+  links:
+  - name: Placement Operator
+    url: https://github.com/openstack-k8s-operators/placement-operator
+  maturity: beta
+  provider:
+    name: Red Hat Inc.
+    url: https://redhat.com/
+  version: 0.0.0
